@@ -1,25 +1,9 @@
 ---
-import Layout from '../components/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'About me';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <script
-      src="https://kit.fontawesome.com/a5ddce6fed.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>{pageTitle}</title>
-  </head>
-
-  <body>
-    <Layout>
-      <h1>{pageTitle}</h1>
-      <h2>This is a test</h2>
-    </Layout>
-  </body>
-</html>
+<BaseLayout>
+  <h1>{pageTitle}</h1>
+  <h2>This is a test</h2>
+</BaseLayout>

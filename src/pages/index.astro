@@ -1,47 +1,28 @@
 ---
-import Layout from '../components/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <script
-      src="https://kit.fontawesome.com/a5ddce6fed.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Astro</title>
-  </head>
-
-  <body>
-    <Layout>
-      <div class="text-center flex flex-col gap-10">
-        <h1 class="text-5xl">
-          Hi, I'm <span class="font-bold">Omri Green</span>
-        </h1>
-        <img
-          src="/assets/profile.jpg"
-          alt="profile"
-          class="rounded-full w-80 shadow border-2 border-neutral-400 mx-auto"
-        />
-        <p class="text-lg">
-          A frontend software devleoper, passionate about all-things web dev.
-        </p>
-        <div>
-          <h2 class="text-2xl">Technologies I'm interested in:</h2>
-          <div>
-            <i class="fa-brands fa-react"></i>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-square-js"></i>
-          </div>
-        </div>
+<BaseLayout>
+  <div class="text-center flex flex-col gap-10">
+    <h1 class="text-5xl">
+      Hi, I'm <span class="font-bold">Omri Green</span>
+    </h1>
+    <img
+      src="/assets/profile.jpg"
+      alt="profile"
+      class="rounded-full w-80 shadow border-2 border-neutral-400 mx-auto"
+    />
+    <p class="text-lg">
+      A frontend software devleoper, passionate about all-things web dev.
+    </p>
+    <div>
+      <h2 class="text-2xl">Technologies I'm interested in:</h2>
+      <div>
+        <i class="fa-brands fa-react"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-square-js"></i>
       </div>
-    </Layout>
-  </body>
-  <script>
-    import '../scripts/menu.ts';
-  </script>
-</html>
+    </div>
+  </div>
+</BaseLayout>
