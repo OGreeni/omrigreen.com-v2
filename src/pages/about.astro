@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Layout from '../components/Layout.astro';
 const pageTitle = 'About me';
 ---
 
@@ -9,12 +9,17 @@ const pageTitle = 'About me';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      src="https://kit.fontawesome.com/a5ddce6fed.js"
+      crossorigin="anonymous"
+    ></script>
     <title>{pageTitle}</title>
   </head>
 
   <body>
-    <Navigation />
-    <h1>{pageTitle}</h1>
-    <h2>This is a test</h2>
+    <Layout>
+      <h1>{pageTitle}</h1>
+      <h2>This is a test</h2>
+    </Layout>
   </body>
 </html>

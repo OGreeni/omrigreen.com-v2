@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Layout from '../components/Layout.astro';
 ---
 
 <html lang="en">
@@ -8,11 +8,16 @@ import Navigation from '../components/Navigation.astro';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      src="https://kit.fontawesome.com/a5ddce6fed.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Astro</title>
   </head>
 
   <body>
-    <Navigation />
-    <h1>Blog</h1>
+    <Layout>
+      <h1>Blog</h1>
+    </Layout>
   </body>
 </html>

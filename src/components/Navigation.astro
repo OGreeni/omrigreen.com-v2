@@ -1,6 +1,25 @@
 ---
+import Hamburger from './Hamburger.astro';
 ---
 
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<nav class="flex justify-between text-2xl">
+  <div class="flex">
+    <a href="/"
+      ><i class="fa-solid fa-house hover:text-primary-400 transition-colors"
+      ></i>
+    </a>
+  </div>
+  <Hamburger />
+  <div class="gap-5 hidden md:flex">
+    <a
+      href="/about/"
+      class="relative after:absolute after:w-full after:bottom-0 after:left-0 hover:after:border-primary-400 hover:after:border-b-4 after:transition-all"
+      >About</a
+    >
+    <a
+      href="/blog/"
+      class="relative after:absolute after:w-full after:bottom-0 after:left-0 hover:after:border-primary-400 hover:after:border-b-4 after:transition-all"
+      >Blog</a
+    >
+  </div>
+</nav>
