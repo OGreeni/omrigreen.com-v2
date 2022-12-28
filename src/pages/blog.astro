@@ -11,7 +11,7 @@ const pageTitle = 'My Blog';
     posts.map((post) => (
       <BlogPost
         title={post.frontmatter.title}
-        url={post.url}
+        url={post.url as string}
         description={post.frontmatter.description}
       />
     ))
