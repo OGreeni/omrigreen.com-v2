@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
 const posts = await Astro.glob('../posts/*.md');
 const uniqueTags = [
   ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
