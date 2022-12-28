@@ -4,8 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout pageTitle="Home | Omri Green">
   <div class="text-center flex flex-col gap-10">
-    <h1 class="text-5xl">
-      Hi, I'm <span class="font-bold">Omri Green</span>
+    <h1 class="text-5xl whitespace-nowrap">
+      Hi, I'm <span class="font-bold"
+        >Omri <span class="text-primary-400">Green</span>
+      </span>
     </h1>
     <img
       src="/assets/profile.jpg"
@@ -13,16 +15,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       class="rounded-full w-80 shadow border-2 border-neutral-400 mx-auto"
     />
     <p class="text-lg">
-      A frontend software devleoper, passionate about all-things web dev.
+      A frontend software devleoper, passionate about all-things web dev. 👨🏻‍💻
     </p>
-    <div>
-      <h2 class="text-2xl">Technologies I'm interested in:</h2>
-      <div>
-        <i class="fa-brands fa-react"></i>
-        <i class="fa-brands fa-html5"></i>
-        <i class="fa-brands fa-css3-alt"></i>
-        <i class="fa-brands fa-square-js"></i>
-      </div>
-    </div>
   </div>
 </BaseLayout>

@@ -21,3 +21,12 @@ tags: ['astro', 'blogging', 'learning in public']
 ## What's next
 
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+
+```js
+console.log('123');
+
+const hello = 123;
+export default hello;
+```
+
+what `the` awdaad
