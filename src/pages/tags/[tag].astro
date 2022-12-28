@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
-import type { Post } from '../../layouts/MarkdownPostLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await Astro.glob('../posts/*.md');
