@@ -1,22 +1,13 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import PostCard from '@components/PostCard.astro';
-const posts = (await Astro.glob('../pages/posts/*.md')) as Post[];
+const posts = await Astro.glob<Frontmatter>('../pages/posts/*.md');
 const pageTitle = 'My Blog';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h1 class="text-4xl md:text-5xl text-center">My Recent Posts</h1>
   <ul class="flex flex-col gap-5">
-    {
-      posts.map((post) => (
-        <PostCard
-          title={post.frontmatter.title}
-          url={post.url!}
-          description={post.frontmatter.description}
-          tags={post.frontmatter.tags}
-        />
-      ))
-    }
+    {posts.map((post) => <PostCard {...post} />)}
   </ul>
 </BaseLayout>

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import Tag from '@components/Tag.astro';
+
 const posts = await Astro.glob('../posts/*.md');
 const uniqueTags = [
   ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
@@ -7,11 +9,12 @@ const uniqueTags = [
 ---
 
 <BaseLayout pageTitle={'tags'}>
-  <ul class="flex flex-col">
+  <h1 class="text-4xl md:text-5xl text-center">All Tags</h1>
+  <ul class="flex flex-col items-center text-xl font-bold">
     {
       uniqueTags.map((tag) => (
         <li>
-          <a href={`tags/${tag}`}>{tag}</a>
+          <Tag type={tag} />
         </li>
       ))
     }

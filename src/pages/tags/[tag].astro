@@ -2,8 +2,12 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import PostCard from '@components/PostCard.astro';
 
+interface Props {
+  posts: { frontmatter: Frontmatter }[];
+}
+
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../posts/*.md');
+  const posts = await Astro.glob<Frontmatter>('../posts/*.md');
   const uniqueTags = [
     ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
   ];
@@ -20,21 +24,14 @@ export async function getStaticPaths() {
 }
 
 const tag = Astro.params.tag!;
-const posts: Post[] = Astro.props.posts;
+const posts = Astro.props.posts;
 ---
 
 <BaseLayout pageTitle={tag}
-  ><p>Posts tagged with {tag}</p>
+  ><h1 class="text-4xl md:text-5xl text-center">
+    Posts tagged with <span class="font-bold">{tag}</span>
+  </h1>
   <ul>
-    {
-      posts.map((post) => (
-        <PostCard
-          title={post.frontmatter.title}
-          url={post.url}
-          description={post.frontmatter.description}
-          tags={post.frontmatter.tags}
-        />
-      ))
-    }
+    {posts.map((post) => <PostCard {...post} />)}
   </ul>
 </BaseLayout>

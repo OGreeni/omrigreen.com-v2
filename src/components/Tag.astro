@@ -1,14 +1,6 @@
 ---
 interface Props {
-  type:
-    | 'react'
-    | 'javascript'
-    | 'typescript'
-    | 'nextjs'
-    | 'astro'
-    | 'css'
-    | 'tailwind'
-    | 'nodejs';
+  type: string;
 }
 
 const { type } = Astro.props;
@@ -31,7 +23,7 @@ type === 'react'
   ? (className = 'hover:text-tailwind transition-colors')
   : type === 'nodejs'
   ? (className = 'hover:text-nodejs transition-colors')
-  : '';
+  : (className = 'hover:text-primary-400 transition-colors');
 ---
 
 <a href={`/tags/${type}`}>#<span class={className}>{type}</span></a>
