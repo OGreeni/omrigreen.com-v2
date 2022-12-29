@@ -1,16 +1,15 @@
 ---
-import Hamburger from '@components/Hamburger.astro';
+import MobileMenu from './MobileMenu.astro';
 ---
 
-<nav class="flex justify-between text-2xl">
-  <div class="flex">
+<nav class="flex justify-between text-2xl w-full">
+  <div>
     <a href="/"
       ><i class="fa-solid fa-house hover:text-primary-400 transition-colors"
       ></i>
     </a>
   </div>
-  <Hamburger />
-  <div class="gap-5 hidden md:flex">
+  <div class="hidden md:flex gap-3">
     <a
       href="/about/"
       class="relative after:absolute after:w-full after:bottom-0 after:left-0 hover:after:border-primary-400 hover:after:border-b-4 after:transition-all"
@@ -27,4 +26,5 @@ import Hamburger from '@components/Hamburger.astro';
       >Tags</a
     >
   </div>
+  <MobileMenu />
 </nav>

@@ -3,8 +3,8 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
 <BaseLayout pageTitle="Home | Omri Green">
-  <div class="text-center flex flex-col gap-10">
-    <h1 class="text-5xl whitespace-nowrap">
+  <section class="text-center flex flex-col gap-10">
+    <h1 class="text-4xl whitespace-nowrap md:text-5xl">
       Hi, I'm <span class="font-bold"
         >Omri <span class="text-primary-400">Green</span>
       </span>
@@ -14,8 +14,57 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       alt="profile"
       class="rounded-full w-80 shadow border-2 border-neutral-400 mx-auto"
     />
-    <p class="text-lg">
+    <p class="text-xl">
       A frontend software devleoper, passionate about all-things web dev. 👨🏻‍💻
     </p>
-  </div>
+  </section>
+  <section class="flex flex-col gap-5 items-center text-center">
+    <h2 class="text-2xl text-center">Read My Blog:</h2>
+    <ul class="font-bold text-lg grid grid-cols-3 gap-3">
+      <li>
+        <a href="/tags/react"
+          >#<span class="hover:text-[#61dafb] transition-colors">React</span>
+        </a>
+      </li>
+      <li>
+        <a href="/tags/javascript"
+          >#<span class="hover:text-[#fcdc03] transition-colors"
+            >JavaScript</span
+          >
+        </a>
+      </li>
+      <li>
+        <a href="/tags/typescript"
+          >#<span class="hover:text-[#3178c6] transition-colors"
+            >TypeScript</span
+          >
+        </a>
+      </li>
+      <li>
+        <a href="/tags/nextjs"
+          >#<span class="hover:text-[#000000] transition-colors">Next.js</span>
+        </a>
+      </li>
+      <li>
+        <a href="/tags/astro"
+          >#<span class="hover:text-[#ff7e34] transition-colors">Astro</span>
+        </a>
+      </li>
+      <li>
+        <a href="/tags/css"
+          >#<span class="hover:text-[#264de4] transition-colors">CSS</span>
+        </a>
+      </li>
+      <li>
+        <a href="/tags/tailwind"
+          >#<span class="hover:text-[#38bdf8] transition-colors">Tailwind</span>
+        </a>
+      </li>
+      <li>
+        <a href="/tags/nodejs"
+          >#<span class="hover:text-[#89bc3c] transition-colors">Node.js</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 </BaseLayout>

@@ -5,6 +5,7 @@ import Footer from '@components/Footer.astro';
 
 interface Props {
   pageTitle: string;
+  children: any;
 }
 
 const { pageTitle } = Astro.props;
@@ -25,7 +26,9 @@ const { pageTitle } = Astro.props;
 
   <body class="max-w-2xl mx-auto min-h-screen px-8 py-2">
     <Header />
-    <slot />
+    <div class="flex flex-col gap-10">
+      <slot />
+    </div>
     <Footer />
   </body>
   <script>

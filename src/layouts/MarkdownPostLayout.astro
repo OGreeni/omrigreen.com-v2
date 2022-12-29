@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 
-interface Props {
-  frontmatter: Post['frontmatter'];
-  url: Post['url'];
+interface Props extends Post {
+  children: any;
 }
 
 const { frontmatter } = Astro.props;
