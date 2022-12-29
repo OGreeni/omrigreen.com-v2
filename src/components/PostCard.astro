@@ -1,14 +1,11 @@
 ---
 import Tag from '@components/Tag.astro';
+import { formatDateString } from '@utils/dates';
 interface Props {
   frontmatter: Frontmatter;
 }
 const { frontmatter, url } = Astro.props;
-const formattedDate = frontmatter.pubDate
-  .split('T')[0]
-  ?.split('-')
-  .reverse()
-  .join('-');
+const formattedDate = formatDateString(frontmatter.pubDate);
 ---
 
 <li
