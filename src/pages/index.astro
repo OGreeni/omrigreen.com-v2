@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import Tag from '@components/Tag.astro';
 ---
 
 <BaseLayout pageTitle="Home | Omri Green">
@@ -22,48 +23,28 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     <h2 class="text-2xl text-center">Read My Blog:</h2>
     <ul class="font-bold text-lg grid grid-cols-3 gap-3">
       <li>
-        <a href="/tags/react"
-          >#<span class="hover:text-[#61dafb] transition-colors">React</span>
-        </a>
+        <Tag type="react" />
       </li>
       <li>
-        <a href="/tags/javascript"
-          >#<span class="hover:text-[#fcdc03] transition-colors"
-            >JavaScript</span
-          >
-        </a>
+        <Tag type="javascript" />
       </li>
       <li>
-        <a href="/tags/typescript"
-          >#<span class="hover:text-[#3178c6] transition-colors"
-            >TypeScript</span
-          >
-        </a>
+        <Tag type="typescript" />
       </li>
       <li>
-        <a href="/tags/nextjs"
-          >#<span class="hover:text-[#000000] transition-colors">Next.js</span>
-        </a>
+        <Tag type="nextjs" />
       </li>
       <li>
-        <a href="/tags/astro"
-          >#<span class="hover:text-[#ff7e34] transition-colors">Astro</span>
-        </a>
+        <Tag type="astro" />
       </li>
       <li>
-        <a href="/tags/css"
-          >#<span class="hover:text-[#264de4] transition-colors">CSS</span>
-        </a>
+        <Tag type="css" />
       </li>
       <li>
-        <a href="/tags/tailwind"
-          >#<span class="hover:text-[#38bdf8] transition-colors">Tailwind</span>
-        </a>
+        <Tag type="tailwind" />
       </li>
       <li>
-        <a href="/tags/nodejs"
-          >#<span class="hover:text-[#89bc3c] transition-colors">Node.js</span>
-        </a>
+        <Tag type="nodejs" />
       </li>
     </ul>
   </section>

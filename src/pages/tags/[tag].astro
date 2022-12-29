@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import BlogPost from '@components/BlogPost.astro';
+import PostCard from '@components/PostCard.astro';
 
 export async function getStaticPaths() {
   const posts = await Astro.glob('../posts/*.md');
@@ -28,10 +28,11 @@ const posts: Post[] = Astro.props.posts;
   <ul>
     {
       posts.map((post) => (
-        <BlogPost
+        <PostCard
           title={post.frontmatter.title}
           url={post.url}
           description={post.frontmatter.description}
+          tags={post.frontmatter.tags}
         />
       ))
     }

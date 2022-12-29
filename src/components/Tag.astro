@@ -1,0 +1,37 @@
+---
+interface Props {
+  type:
+    | 'react'
+    | 'javascript'
+    | 'typescript'
+    | 'nextjs'
+    | 'astro'
+    | 'css'
+    | 'tailwind'
+    | 'nodejs';
+}
+
+const { type } = Astro.props;
+let className = '';
+
+// workaround --> dynamic class names not allowed in tailwind
+type === 'react'
+  ? (className = 'hover:text-react transition-colors')
+  : type === 'javascript'
+  ? (className = 'hover:text-javascript transition-colors')
+  : type === 'typescript'
+  ? (className = 'hover:text-typescript transition-colors')
+  : type === 'nextjs'
+  ? (className = 'hover:text-nextjs transition-colors')
+  : type === 'astro'
+  ? (className = 'hover:text-astro transition-colors')
+  : type === 'css'
+  ? (className = 'hover:text-css transition-colors')
+  : type === 'tailwind'
+  ? (className = 'hover:text-tailwind transition-colors')
+  : type === 'nodejs'
+  ? (className = 'hover:text-nodejs transition-colors')
+  : '';
+---
+
+<a href={`/tags/${type}`}>#<span class={className}>{type}</span></a>

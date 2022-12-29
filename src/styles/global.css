@@ -18,4 +18,12 @@
 :root {
   --color-primary-400: #50c878;
   --color-neutral-400: #495057;
+  --color-react: #61dafb;
+  --color-javascript: #fcdc03;
+  --color-typescript: #3178c6;
+  --color-nextjs: #000000;
+  --color-astro: #ff7e34;
+  --color-css: #264de4;
+  --color-tailwind: #38bdf8;
+  --color-nodejs: #89bc3c;
 }
