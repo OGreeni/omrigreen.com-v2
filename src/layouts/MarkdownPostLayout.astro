@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-
+import { formatDateString } from '@utils/dates';
 interface Props {
   frontmatter: Frontmatter;
   children: any;
@@ -10,19 +10,38 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <h1 class="text-4xl md:text-5xl text-center">{frontmatter.title}</h1>
-  <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by {frontmatter.author}</p>
-  <div>
-    {
-      frontmatter.tags.map((tag) => (
-        <p>
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css"
+    slot="head"
+  />
+  <style slot="head">
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-  </div>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <slot />
+  </style>
+  <article class="markdown-body">
+    <h1 class="text-4xl md:text-5xl text-center">{frontmatter.title}</h1>
+    <p class="font-bold">
+      Published on: <span class="text-primary-400"
+        >{formatDateString(frontmatter.pubDate)}</span
+      >
+    </p>
+    <p><em>{frontmatter.description}</em></p>
+    <p>Written by {frontmatter.author}</p>
+    <div>
+      {
+        frontmatter.tags.map((tag) => (
+          <p>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))
+      }
+    </div>
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <slot />
+  </article>
 </BaseLayout>

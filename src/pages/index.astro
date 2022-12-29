@@ -5,6 +5,8 @@ const posts = await Astro.glob<Frontmatter>('./posts/*.md');
 const uniqueTags = [
   ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
 ];
+
+import Greeting from '@components/react/Greeting';
 ---
 
 <BaseLayout pageTitle="Home | Omri Green">
@@ -35,4 +37,5 @@ const uniqueTags = [
       }
     </ul>
   </section>
+  <Greeting client:load messages={['Hi', 'Hello', 'Howdy', 'Hey there']} />
 </BaseLayout>

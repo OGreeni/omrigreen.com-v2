@@ -21,6 +21,7 @@ const { pageTitle } = Astro.props;
       src="https://kit.fontawesome.com/a5ddce6fed.js"
       crossorigin="anonymous"
     ></script>
+    <slot name="head" />
     <title>{pageTitle}</title>
   </head>
 
