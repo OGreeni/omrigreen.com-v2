@@ -25,7 +25,9 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
 
-  <body class="max-w-2xl mx-auto min-h-screen px-8 py-2">
+  <body
+    class="max-w-2xl mx-auto min-h-screen px-8 py-2 bg-body-100 dark:bg-body-900 dark:text-white"
+  >
     <Header />
     <div class="flex flex-col gap-10">
       <slot />

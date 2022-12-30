@@ -11,20 +11,31 @@
       'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
       'Helvetica Neue', sans-serif;
   }
-  body {
-    color: var(--color-neutral-400);
-  }
 }
 
 :root {
   --color-primary-400: #50c878;
-  --color-neutral-400: #495057;
+  --color-body-100: #f9f9f9;
+  --color-body-900: #0d1117;
   --color-react: #61dafb;
   --color-javascript: #fcdc03;
   --color-typescript: #3178c6;
-  --color-nextjs: #000000;
+  --color-nextjs: #5f5f5f;
   --color-astro: #ff7e34;
   --color-css: #264de4;
   --color-tailwind: #38bdf8;
   --color-nodejs: #89bc3c;
+}
+
+/* override github markdown styles */
+@media (prefers-color-scheme: light) {
+  .markdown-body a {
+    color: #24292f !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body a {
+    color: white !important;
+  }
 }

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import Tag from '@components/Tag.astro';
 import { formatDateString } from '@utils/dates';
 interface Props {
   frontmatter: Frontmatter;
@@ -12,7 +13,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.title}>
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-dark.min.css"
     slot="head"
   />
   <style slot="head">
@@ -30,18 +31,14 @@ const { frontmatter } = Astro.props;
         >{formatDateString(frontmatter.pubDate)}</span
       >
     </p>
-    <p><em>{frontmatter.description}</em></p>
-    <p>Written by {frontmatter.author}</p>
-    <div>
-      {
-        frontmatter.tags.map((tag) => (
-          <p>
-            <a href={`/tags/${tag}`}>{tag}</a>
-          </p>
-        ))
-      }
+    <p class="font-bold">
+      Written by: <span class="text-primary-400">{frontmatter.author}</span>
+    </p>
+    <div class="text-md font-bold">
+      Tags:
+      {frontmatter.tags.map((tag) => <Tag type={tag} />)}
     </div>
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <!-- <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> -->
     <slot />
   </article>
 </BaseLayout>

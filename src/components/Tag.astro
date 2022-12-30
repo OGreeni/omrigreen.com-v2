@@ -26,4 +26,6 @@ type === 'react'
   : (className = 'hover:text-primary-400 transition-colors');
 ---
 
-<a href={`/tags/${type}`}>#<span class={className}>{type}</span></a>
+<a href={`/tags/${type}`} class="hover:underline"
+  >#<span class={className}>{type}</span>
+</a>
