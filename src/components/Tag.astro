@@ -8,24 +8,26 @@ let className = '';
 
 // workaround --> dynamic class names not allowed in tailwind
 type === 'react'
-  ? (className = 'hover:text-react transition-colors')
+  ? (className = 'hover:text-react')
   : type === 'javascript'
-  ? (className = 'hover:text-javascript transition-colors')
+  ? (className = 'hover:text-javascript')
   : type === 'typescript'
-  ? (className = 'hover:text-typescript transition-colors')
+  ? (className = 'hover:text-typescript')
   : type === 'nextjs'
-  ? (className = 'hover:text-nextjs transition-colors')
+  ? (className = 'hover:text-nextjs')
   : type === 'astro'
-  ? (className = 'hover:text-astro transition-colors')
+  ? (className = 'hover:text-astro')
   : type === 'css'
-  ? (className = 'hover:text-css transition-colors')
+  ? (className = 'hover:text-css ')
   : type === 'tailwind'
-  ? (className = 'hover:text-tailwind transition-colors')
+  ? (className = 'hover:text-tailwind')
   : type === 'nodejs'
-  ? (className = 'hover:text-nodejs transition-colors')
-  : (className = 'hover:text-primary-400 transition-colors');
+  ? (className = 'hover:text-nodejs')
+  : type === 'git'
+  ? (className = 'hover:text-git')
+  : (className = 'hover:text-primary-400');
 ---
 
 <a href={`/tags/${type}`} class="hover:underline"
-  >#<span class={className}>{type}</span>
+  >#<span class={`${className} transition-colors`}>{type}</span>
 </a>

@@ -16,6 +16,7 @@ module.exports = {
         css: 'var(--color-css)',
         tailwind: 'var(--color-tailwind)',
         nodejs: 'var(--color-nodejs)',
+        git: 'var(--color-git)',
       },
     },
   },

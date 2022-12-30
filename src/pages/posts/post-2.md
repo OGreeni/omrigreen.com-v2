@@ -7,7 +7,7 @@ author: 'Astro Learner'
 image:
   url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
   alt: 'The Astro logo with the word One.'
-tags: ['astro', 'nextjs', 'tailwind']
+tags: ['astro', 'nextjs', 'tailwind', 'git']
 ---
 
 ## What I've accomplished
