@@ -1,13 +1,13 @@
 ---
 layout: '../../layouts/MarkdownPostLayout.astro'
-title: 'My First Blog Post'
+title: 'Client vs Server Components in Next.js 13'
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+author: 'Omri Green'
+description: The crucial difference between client & server components in Next.js 13.
 image:
-  url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-  alt: 'The Astro logo with the word One.'
-tags: ['css', 'javascript']
+  url: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'
+  alt: 'Macbook pro coding stock image'
+tags: ['nextjs', 'react']
 ---
 
 ## What I've accomplished

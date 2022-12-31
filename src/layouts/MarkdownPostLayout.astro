@@ -34,11 +34,21 @@ const { frontmatter } = Astro.props;
     <p class="font-bold">
       Written by: <span class="text-primary-400">{frontmatter.author}</span>
     </p>
-    <div class="text-md font-bold">
-      Tags:
-      {frontmatter.tags.map((tag) => <Tag type={tag} />)}
-    </div>
-    <!-- <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> -->
-    <slot />
+    <p>
+      <p class="font-bold">
+        Description: <em class="font-normal">{frontmatter.description}</em>
+      </p>
+      <div class="text-md font-bold my-2">
+        Tags:
+        {frontmatter.tags.map((tag) => <Tag type={tag} />)}
+      </div>
+      <img
+        src={frontmatter.image.url}
+        alt={frontmatter.image.alt}
+        class="mx-auto"
+      />
+      <!-- <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> -->
+      <slot />
+    </p>
   </article>
 </BaseLayout>
